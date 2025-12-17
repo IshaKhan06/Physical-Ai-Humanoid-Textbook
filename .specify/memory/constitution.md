@@ -1,55 +1,71 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT
+Version change: N/A -> 1.0.0
+Modified principles: N/A (new constitution)
+Added sections: Vision, Core Principles (6), Success Criteria, Constraints, Stakeholders, Brand Voice
+Removed sections: N/A
+Templates requiring updates: ⚠ pending - .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
+Follow-up TODOs: None
+-->
+
+# Physical AI & Humanoid Robotics Constitution
+
+## Vision
+
+We are creating an AI-native textbook that makes Physical AI and Humanoid Robotics accessible to beginners and intermediate learners. Our vision is to bridge the gap between digital intelligence and physical embodiment, enabling students to understand how AI systems interact with the real world through robotics. We aim to provide hands-on learning experiences that combine theory with practical simulation and lab work.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Beginner-Friendly Accessibility
+Content must be clear, practical, and approachable for beginners to intermediate learners. All concepts should be explained with intuitive analogies, visual aids, and progressive complexity. No assumption of advanced prior knowledge should be made without clear prerequisites stated. This ensures our textbook serves as an effective entry point into Physical AI and robotics.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Hands-On Learning Approach
+Every concept must be paired with practical exercises, simulations, or labs. Theory without practice is incomplete. Students learn best when they can experiment with ROS 2 nodes, simulate robots in Gazebo/Unity, and work with NVIDIA Isaac and VLA models. Practical application reinforces theoretical understanding and builds confidence.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Modular and Progressive Curriculum
+The curriculum follows a logical progression through five core modules: ROS 2 (robotic nervous system), simulation environments, AI brain systems, vision-language-action integration, and capstone projects. Each module builds upon previous knowledge while remaining as self-contained as possible for flexible learning paths. This structure supports both sequential and selective study.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Technology Stack Alignment
+All content must align with the specified technology stack: ROS 2, Gazebo/Unity, NVIDIA Isaac, Docusaurus, Spec-Kit Plus, FastAPI, OpenAI Agents, Neon Postgres, and Qdrant. Examples, tutorials, and code snippets must reflect these tools to ensure consistency and practical applicability. This creates a cohesive learning ecosystem.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. AI-Native Integration
+The textbook leverages modern AI tools throughout the learning process. The RAG chatbot enables intelligent Q&A, content personalization adapts to individual learning styles, and AI assistance guides students through complex concepts. The textbook itself is designed as an AI-powered learning companion, not just static content.
 
-### [PRINCIPLE_6_NAME]
+### VI. Inclusive and Global Reach
+Content must be accessible to diverse audiences, including support for Urdu translation and culturally inclusive examples. The learning materials should accommodate different learning styles, backgrounds, and accessibility needs. This commitment ensures the textbook serves a global audience interested in Physical AI and robotics.
 
+## Success Criteria
 
-[PRINCIPLE__DESCRIPTION]
+- Students can successfully complete all hands-on exercises and build functional robotic systems
+- Learners progress from beginner to intermediate competency in Physical AI and robotics
+- The RAG chatbot effectively answers student questions with high accuracy (>90% satisfaction)
+- All five course modules (ROS 2, simulation, Isaac, VLA, capstone) are fully implemented with practical examples
+- Content is successfully translated and localized for global accessibility
+- Students can build an autonomous humanoid robot by the end of the capstone module
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- Content must be suitable for beginners to intermediate learners (no expert-level assumptions)
+- All examples must work with the specified technology stack
+- Simulations and labs must be reproducible in standard development environments
+- Content must be translatable to Urdu and other languages
+- All AI integration must comply with ethical guidelines and privacy regulations
+- The textbook must be deployable as a Docusaurus site with integrated chatbot functionality
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Stakeholders
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- **Students**: Primary beneficiaries who will learn Physical AI and robotics concepts
+- **Educators**: Teachers and instructors who may adopt this textbook for courses
+- **Developers**: Technical contributors maintaining and improving the content
+- **AI Systems**: The automated tools (chatbot, personalization engine) that enhance learning
+- **Industry Partners**: Organizations interested in training talent in Physical AI and robotics
+- **Global Learners**: International students who will benefit from translated content
+
+## Brand Voice
+
+Our brand voice is educational, encouraging, and technically precise. We speak with enthusiasm for Physical AI and robotics while maintaining clarity and approachability. We use empowering language that builds student confidence, provide honest assessments of complexity, and celebrate the achievements of learners at every step. Our tone is professional yet friendly, acknowledging the challenges of robotics while emphasizing the achievable nature of mastery through guided practice.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all aspects of the Physical AI & Humanoid Robotics textbook development. All content, features, and implementations must align with these principles. Any significant deviations require constitutional amendments with clear justification. Regular compliance reviews ensure adherence to these principles throughout the development lifecycle.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-17 | **Last Amended**: 2025-12-17
