@@ -11,14 +11,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ishakhan06.github.io',
+  url: 'https://your-physical-ai-book.netlify.app/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-Ai-Humanoid-Textbook/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
-  organizationName: 'IshaKhan06', // Usually your GitHub org/user name.
-  projectName: 'Physical-Ai-Humanoid-Textbook', // Usually your repo name.
+  organizationName: 'physical-ai-textbook', // Usually your GitHub org/user name.
+  projectName: 'physical-ai-textbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -30,8 +30,6 @@ const config = {
     defaultLocale: 'en',
     locales: ['en', 'ur'], // Include Urdu for translation support
   },
-
-  trailingSlash: false, // Fix GitHub Pages URL issues
 
   presets: [
     [
