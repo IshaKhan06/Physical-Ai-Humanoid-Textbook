@@ -59,6 +59,39 @@
   margin: 10px 0;
 }
 
+/* Footer styling to match hero section */
+.footer {
+  background-color: #2e8555 !important; /* Primary color to match hero section */
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem; /* Add space from previous section */
+}
+
+.footer__title {
+  color: white;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__link:hover {
+  color: white;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+/* For dark mode - adjust as needed */
+html[data-theme='dark'] .footer {
+  background-color: #21af90 !important; /* Darker primary color for dark mode */
+}
+
 /* Styles for multilingual content */
 .urdu-text {
   font-family: 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;

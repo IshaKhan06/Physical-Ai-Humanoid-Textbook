@@ -26,6 +26,24 @@ function HomepageHeader() {
   );
 }
 
+function BookDescription() {
+  return (
+    <section className={styles.bookDescription}>
+      <div className="container">
+        <div className="text--center">
+          <h2 className={styles.bookDescriptionHeading}>What this Textbook Covers</h2>
+          <p className={styles.bookDescriptionText}>
+            This comprehensive textbook on Physical AI & Humanoid Robotics bridges the gap between digital intelligence and physical systems.
+            It covers cutting-edge topics including embodied AI, sensorimotor learning, and the integration of artificial intelligence with humanoid robots.
+            Designed for students, researchers, and practitioners, this book provides both theoretical foundations and practical implementations
+            essential for understanding and developing next-generation intelligent robotic systems that interact seamlessly with the physical world.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -34,6 +52,7 @@ export default function Home() {
       description="Physical AI & Humanoid Robotics Textbook">
       <HomepageHeader />
       <main>
+        <BookDescription />
         <HomepageFeatures />
       </main>
     </Layout>

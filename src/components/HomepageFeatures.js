@@ -47,6 +47,10 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="text--center padding-bottom--xl">
+          <h2 className={styles.featuresHeading}>Core Course Subjects</h2>
+          <p className={styles.featuresSubheading}>Explore the fundamental topics covered in this comprehensive textbook</p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Physical AI & Humanoid Robotics',
+  title: 'Physical AI & Humanoid Robotics Textbook',
   tagline: 'Bridging the Digital Brain and Physical Body',
   favicon: 'img/favicon.ico',
 
