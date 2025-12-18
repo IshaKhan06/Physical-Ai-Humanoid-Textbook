@@ -11,14 +11,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'http://localhost:3000',
+  url: 'https://ishakhan06.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Physical-Ai-Humanoid-Textbook/',
 
   // GitHub pages deployment config.
-  organizationName: 'physical-ai-textbook', // Usually your GitHub org/user name.
-  projectName: 'physical-ai-textbook', // Usually your repo name.
+  organizationName: 'IshaKhan06', // Usually your GitHub org/user name.
+  projectName: 'Physical-Ai-Humanoid-Textbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -41,7 +41,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/physical-ai-textbook/physical-ai-textbook/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: false, // Disable blog for textbook
         theme: {
@@ -70,7 +70,7 @@ const config = {
             label: 'Modules',
           },
           {
-            href: 'https://github.com/physical-ai-textbook/physical-ai-textbook',
+            href: 'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook',
             label: 'GitHub',
             position: 'right',
           },
@@ -122,7 +122,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/physical-ai-textbook/physical-ai-textbook',
+                href: 'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook',
               },
             ],
           },
