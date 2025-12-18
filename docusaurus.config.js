@@ -31,6 +31,8 @@ const config = {
     locales: ['en', 'ur'], // Include Urdu for translation support
   },
 
+  trailingSlash: false, // Fix GitHub Pages URL issues
+
   presets: [
     [
       'classic',
