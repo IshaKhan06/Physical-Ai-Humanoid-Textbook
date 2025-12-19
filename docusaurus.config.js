@@ -10,15 +10,14 @@ const config = {
   tagline: 'Bridging the Digital Brain and Physical Body',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://ishakhan06.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // Correct production URL for GitHub Pages
+  url: 'https://IshaKhan06.github.io',   // ✅ CHANGE HERE
   baseUrl: '/Physical-Ai-Humanoid-Textbook/',
 
-  // GitHub pages deployment config.
-  organizationName: 'IshaKhan06', // Your GitHub org/user name for GitHub Pages deployment
-  projectName: 'Physical-Ai-Humanoid-Textbook', // Your repo name for GitHub Pages deployment
+  // GitHub pages deployment config
+  organizationName: 'IshaKhan06',
+  projectName: 'Physical-Ai-Humanoid-Textbook',
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   markdown: {
@@ -27,38 +26,31 @@ const config = {
     },
   },
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ur'], // Include Urdu for translation support
+    locales: ['en', 'ur'], // Include Urdu
   },
 
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: false, // Disable blog for textbook
+        blog: false, // Disable blog
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
+    {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Physical AI Textbook',
@@ -137,7 +129,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
+    },
 };
 
 module.exports = config;
