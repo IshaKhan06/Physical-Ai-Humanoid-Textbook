@@ -12,7 +12,7 @@ const config = {
 
   // Correct production URL for GitHub Pages
   url: 'https://IshaKhan06.github.io',   // ✅ CHANGE HERE
-  baseUrl: '/Physical-Ai-Humanoid-Textbook/',
+  baseUrl: '/',
 
   // GitHub pages deployment config
   organizationName: 'IshaKhan06',
