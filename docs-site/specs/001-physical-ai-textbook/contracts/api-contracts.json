@@ -1,0 +1,226 @@
+# API Contracts: Physical AI & Humanoid Robotics Textbook
+
+## Authentication Endpoints
+
+### POST /api/auth/signup
+**Description**: Create a new user account with background information
+
+**Request**:
+```json
+{
+  "email": "user@example.com",
+  "password": "secure_password",
+  "name": "John Doe",
+  "background": "beginner",
+  "learning_goals": ["learn ROS basics", "build simple robot"]
+}
+```
+
+**Response** (201 Created):
+```json
+{
+  "id": "user_12345",
+  "email": "user@example.com",
+  "name": "John Doe",
+  "background": "beginner",
+  "personalization_enabled": true,
+  "preferred_language": "en",
+  "created_at": "2025-12-17T10:30:00Z"
+}
+```
+
+### POST /api/auth/signin
+**Description**: Authenticate existing user
+
+**Request**:
+```json
+{
+  "email": "user@example.com",
+  "password": "secure_password"
+}
+```
+
+**Response** (200 OK):
+```json
+{
+  "token": "jwt_token",
+  "user": {
+    "id": "user_12345",
+    "email": "user@example.com",
+    "name": "John Doe",
+    "background": "beginner"
+  }
+}
+```
+
+## Textbook Content Endpoints
+
+### GET /api/modules
+**Description**: Get all textbook modules with basic information
+
+**Response** (200 OK):
+```json
+{
+  "modules": [
+    {
+      "id": "module_1",
+      "title": "ROS 2 - Robotic Nervous System",
+      "slug": "ros-2",
+      "module_number": 1,
+      "week_number": 1,
+      "duration_hours": 10,
+      "learning_objectives": ["Understand ROS 2 architecture", "Create basic nodes"],
+      "prerequisites": []
+    }
+  ]
+}
+```
+
+### GET /api/modules/{slug}
+**Description**: Get specific module content
+
+**Response** (200 OK):
+```json
+{
+  "id": "module_1",
+  "title": "ROS 2 - Robotic Nervous System",
+  "slug": "ros-2",
+  "module_number": 1,
+  "week_number": 1,
+  "content": "# ROS 2 Introduction\n\n...",
+  "content_ur": "# ROS 2 تعارف\n\n...",
+  "hands_on_labs": [
+    {
+      "title": "Create Your First Node",
+      "instructions": "...",
+      "objectives": ["Create a basic ROS node", "Publish messages"]
+    }
+  ],
+  "learning_objectives": ["Understand ROS 2 architecture", "Create basic nodes"],
+  "prerequisites": [],
+  "duration_hours": 10
+}
+```
+
+## Chatbot Endpoints
+
+### POST /api/chat/query
+**Description**: Submit a question to the RAG chatbot
+
+**Request**:
+```json
+{
+  "query": "Explain ROS 2 nodes in simple terms",
+  "context_type": "full-book",
+  "selected_text": null
+}
+```
+
+**Alternative Request** (for selected text context):
+```json
+{
+  "query": "What does this mean?",
+  "context_type": "selected-text",
+  "selected_text": "A ROS 2 node is a process that performs computation..."
+}
+```
+
+**Response** (200 OK):
+```json
+{
+  "response": "A ROS 2 node is a process that performs computation...",
+  "source_modules": ["module_1"],
+  "confidence": 0.95
+}
+```
+
+### POST /api/chat/query-history
+**Description**: Save chat query and response to history
+
+**Request**:
+```json
+{
+  "query_text": "Explain ROS 2 nodes in simple terms",
+  "response_text": "A ROS 2 node is a process that performs computation...",
+  "context_type": "full-book",
+  "source_modules": ["module_1"]
+}
+```
+
+**Response** (201 Created):
+```json
+{
+  "id": "query_12345",
+  "timestamp": "2025-12-17T10:35:00Z"
+}
+```
+
+## Personalization Endpoints
+
+### GET /api/user/profile
+**Description**: Get current user's profile with personalization settings
+
+**Response** (200 OK):
+```json
+{
+  "id": "user_12345",
+  "email": "user@example.com",
+  "name": "John Doe",
+  "background": "beginner",
+  "learning_goals": ["learn ROS basics", "build simple robot"],
+  "personalization_enabled": true,
+  "preferred_language": "en"
+}
+```
+
+### PUT /api/user/profile
+**Description**: Update user profile and personalization settings
+
+**Request**:
+```json
+{
+  "background": "intermediate",
+  "learning_goals": ["learn ROS basics", "build simple robot", "understand navigation"],
+  "personalization_enabled": true,
+  "preferred_language": "ur"
+}
+```
+
+**Response** (200 OK):
+```json
+{
+  "id": "user_12345",
+  "email": "user@example.com",
+  "name": "John Doe",
+  "background": "intermediate",
+  "personalization_enabled": true,
+  "preferred_language": "ur"
+}
+```
+
+## Vector Search Endpoints
+
+### POST /api/search
+**Description**: Perform semantic search across textbook content
+
+**Request**:
+```json
+{
+  "query": "How to create ROS 2 nodes?",
+  "limit": 5
+}
+```
+
+**Response** (200 OK):
+```json
+{
+  "results": [
+    {
+      "content": "A ROS 2 node is a process that performs computation...",
+      "module_id": "module_1",
+      "module_title": "ROS 2 - Robotic Nervous System",
+      "similarity": 0.92
+    }
+  ]
+}
+```

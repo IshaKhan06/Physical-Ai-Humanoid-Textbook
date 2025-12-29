@@ -1,0 +1,38 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  margin-bottom: 2rem; /* Add space before footer */
+}
+
+.featuresHeading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c8a2c;
+  margin-bottom: 0.5rem;
+}
+
+.featuresSubheading {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+html[data-theme='dark'] .featuresHeading {
+  color: #fff;
+}
+
+html[data-theme='dark'] .featuresSubheading {
+  color: #ddd;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+html[data-theme='dark'] .features {
+  background-color: #1a1a1a;
+}
