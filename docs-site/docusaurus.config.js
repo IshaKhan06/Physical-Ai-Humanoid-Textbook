@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Production URL for Vercel deployment
-  url: 'https://physical-ai-humanoid-textbook.vercel.app', // Update this to your actual Vercel URL
+  url: 'https://physical-ai-humanoid-textbook-gamma.vercel.app', // Your actual Vercel URL
   baseUrl: '/',
 
   // Vercel deployment config
