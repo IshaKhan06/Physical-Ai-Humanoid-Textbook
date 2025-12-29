@@ -10,14 +10,14 @@ const config = {
   tagline: 'Bridging the Digital Brain and Physical Body',
   favicon: 'img/favicon.ico',
 
-  // Correct production URL for GitHub Pages
-  url: 'https://IshaKhan06.github.io',   // ✅ CHANGE HERE
+  // Production URL for Vercel deployment
+  url: 'https://physical-ai-humanoid-textbook.vercel.app', // Update this to your actual Vercel URL
   baseUrl: '/',
 
-  // GitHub pages deployment config
+  // Vercel deployment config
   organizationName: 'IshaKhan06',
   projectName: 'Physical-Ai-Humanoid-Textbook',
-  deploymentBranch: 'gh-pages',
+  // deploymentBranch is only needed for GitHub Pages
 
   onBrokenLinks: 'throw',
   markdown: {

@@ -2,7 +2,7 @@
   "name": "physical-ai-textbook",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://IshaKhan06.github.io/Physical-Ai-Humanoid-Textbook",
+  "homepage": "https://physical-ai-humanoid-textbook.vercel.app",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -10,6 +10,7 @@
     "swizzle": "docusaurus swizzle",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "vercel-build": "npm run build",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
