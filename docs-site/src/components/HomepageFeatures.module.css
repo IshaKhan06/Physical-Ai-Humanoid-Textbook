@@ -14,10 +14,14 @@
   margin-bottom: 0.5rem;
 }
 
-.featuresSubheading {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
+
+html[data-theme='dark'] .features {
+  background-color: #1a1a1a;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
 }
 
 html[data-theme='dark'] .featuresHeading {
@@ -26,13 +30,4 @@ html[data-theme='dark'] .featuresHeading {
 
 html[data-theme='dark'] .featuresSubheading {
   color: #ddd;
-}
-
-.featureSvg {
-  height: 200px;
-  width: 200px;
-}
-
-html[data-theme='dark'] .features {
-  background-color: #1a1a1a;
 }

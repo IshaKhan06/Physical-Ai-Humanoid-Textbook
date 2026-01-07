@@ -8,27 +8,24 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const config = {
   title: 'Physical AI & Humanoid Robotics Textbook',
   tagline: 'Bridging the Digital Brain and Physical Body',
+
   favicon: 'img/favicon.ico',
 
-  // Production URL for Vercel deployment
-  url: 'https://physical-ai-humanoid-textbook-delta.vercel.app', // Using your specific working URL
+  // ✅ REQUIRED for Vercel (must NOT be empty)
+  url: 'https://physical-ai-humanoid-textbook.vercel.app',
   baseUrl: '/',
+  trailingSlash: false,
 
-  // Vercel deployment config
+  // GitHub repo info (safe to keep)
   organizationName: 'IshaKhan06',
   projectName: 'Physical-Ai-Humanoid-Textbook',
-  // deploymentBranch is only needed for GitHub Pages
 
   onBrokenLinks: 'throw',
-  markdown: {
-    hooks: {
-      onBrokenMarkdownLinks: 'warn',
-    },
-  },
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ur'], // Include Urdu
+    locales: ['en', 'ur'],
   },
 
   presets: [
@@ -37,10 +34,17 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+
+          // ✅ Docs at ROOT (no /docs 404 issues)
+          routeBasePath: '/',
+
           editUrl:
-            'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook',
         },
-        blog: false, // Disable blog
+
+        // ❌ Blog disabled
+        blog: false,
+
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -52,6 +56,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       image: 'img/docusaurus-social-card.jpg',
+
       navbar: {
         title: 'Physical AI Textbook',
         logo: {
@@ -72,6 +77,7 @@ const config = {
           },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [
@@ -80,33 +86,29 @@ const config = {
             items: [
               {
                 label: 'ROS 2: Robotic Nervous System',
-                to: '/docs/modules/ros2-introduction',
+                to: '/modules/ros2-introduction',
               },
               {
-                label: 'Gazebo & Unity: Digital Twin',
-                to: '/docs/modules/simulation',
+                label: 'Simulation (Gazebo & Unity)',
+                to: '/modules/simulation',
               },
               {
-                label: 'NVIDIA Isaac: AI Robot Brain',
-                to: '/docs/modules/ai-brain',
+                label: 'AI Robot Brain',
+                to: '/modules/ai-brain',
               },
               {
                 label: 'Vision-Language-Action',
-                to: '/docs/modules/vla',
+                to: '/modules/vla',
               },
               {
-                label: 'Capstone: Autonomous Humanoid',
-                to: '/docs/modules/capstone',
+                label: 'Capstone Project',
+                to: '/modules/capstone',
               },
             ],
           },
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/physical-ai',
-              },
               {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/physical-ai',
@@ -118,13 +120,15 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook',
+                href:
+                  'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook`,
       },
+
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
@@ -132,4 +136,4 @@ const config = {
     },
 };
 
-module.exports = config;
+export default config;
