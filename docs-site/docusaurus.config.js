@@ -11,17 +11,17 @@ const config = {
 
   favicon: 'img/favicon.ico',
 
-  // ✅ REQUIRED for Vercel (must NOT be empty)
+  // REQUIRED for Vercel
   url: 'https://physical-ai-humanoid-textbook.vercel.app',
   baseUrl: '/',
   trailingSlash: false,
 
-  // GitHub repo info (safe to keep)
   organizationName: 'IshaKhan06',
   projectName: 'Physical-Ai-Humanoid-Textbook',
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  // Broken links behavior
+  onBrokenLinks: 'throw', // strict build
+  onBrokenMarkdownLinks: 'warn', // just warning
 
   i18n: {
     defaultLocale: 'en',
@@ -35,14 +35,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
 
-          // ✅ Docs at ROOT (no /docs 404 issues)
-          routeBasePath: '/',
+          // ✅ Docs under /docs (fixes navbar broken link)
+          routeBasePath: 'docs',
 
           editUrl:
             'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook',
         },
 
-        // ❌ Blog disabled
         blog: false,
 
         theme: {
@@ -69,6 +68,8 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Modules',
+            // points correctly to docs route
+            docsPluginId: undefined,
           },
           {
             href: 'https://github.com/IshaKhan06/Physical-Ai-Humanoid-Textbook',
@@ -86,23 +87,23 @@ const config = {
             items: [
               {
                 label: 'ROS 2: Robotic Nervous System',
-                to: '/modules/ros2-introduction',
+                to: '/docs/ros2-introduction',
               },
               {
                 label: 'Simulation (Gazebo & Unity)',
-                to: '/modules/simulation',
+                to: '/docs/simulation',
               },
               {
                 label: 'AI Robot Brain',
-                to: '/modules/ai-brain',
+                to: '/docs/ai-brain',
               },
               {
                 label: 'Vision-Language-Action',
-                to: '/modules/vla',
+                to: '/docs/vla',
               },
               {
                 label: 'Capstone Project',
-                to: '/modules/capstone',
+                to: '/docs/capstone',
               },
             ],
           },
